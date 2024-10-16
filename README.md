@@ -1,2 +1,14 @@
-# awk-commands
-this repository shows all the awk command that can be useful.
+# AWK (Basic to Advanced)
+
+Brief description of what your project does.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+```bash
+npm install your-project-name
