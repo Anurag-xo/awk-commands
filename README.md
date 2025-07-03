@@ -4,8 +4,6 @@
 
 AWK is a powerful text processing tool in Linux, primarily used for **pattern scanning and processing**. It reads files line by line, splits each line into fields, compares them against patterns, and performs actions.
 
----
-
 ## 📝 Basic Syntax
 
 ```
@@ -18,8 +16,6 @@ awk \[options] 'pattern {action}' file\_name
   ```bash
   echo "Hello" | awk [options] 'pattern {action}'
   ```
-
-````
 
 ### ⚙️ Common Options
 
@@ -42,8 +38,8 @@ This is line two
 
 When AWK reads it:
 
-* **Row 1:** This is line one
-* **Row 2:** This is line two
+- **Row 1:** This is line one
+- **Row 2:** This is line two
 
 Each row is split into **fields**:
 
@@ -157,25 +153,25 @@ awk -F '[,:]' '{print $1}' file
 
 ## 💡 Use Cases
 
-* **Get status of a service**
+- **Get status of a service**
 
   ```bash
   systemctl status apache2 | awk '/Active/ {print $2}'
   ```
 
-* **List files in a directory**
+- **List files in a directory**
 
   ```bash
   ls -l | awk '{print $9}'
   ```
 
-* **Read logs between timestamps (example)**
+- **Read logs between timestamps (example)**
 
   ```bash
   awk '$0 >= "10:00" && $0 <= "12:00"' logfile
   ```
 
-* **Get files modified in October**
+- **Get files modified in October**
 
   ```bash
   ls -l | awk '$6 == "Oct" {print $9}'
@@ -244,37 +240,37 @@ awk -f script.awk file_name
 
 ## 🔄 Control Structures in AWK
 
-* **Variables**
+- **Variables**
 
   ```bash
   awk -v name="Anurag" 'BEGIN {print name}'
   ```
 
-* **If-Else**
+- **If-Else**
 
   ```bash
   awk '{if($3>50) print "Pass"; else print "Fail"}' file
   ```
 
-* **Arrays**
+- **Arrays**
 
   ```bash
   awk '{arr[NR]=$0} END{for(i in arr) print arr[i]}' file
   ```
 
-* **For Loop**
+- **For Loop**
 
   ```bash
   awk 'BEGIN {for(i=1;i<=5;i++) print i}'
   ```
 
-* **While Loop**
+- **While Loop**
 
   ```bash
   awk 'BEGIN {i=1; while(i<=5) {print i; i++}}'
   ```
 
-* **Functions**
+- **Functions**
 
   ```bash
   awk 'function square(x) {return x*x} BEGIN {print square(4)}'
@@ -312,19 +308,19 @@ awk 'NR>1 {count++} END {print count}' file
 
 ## ✅ Conditional Examples
 
-* **Get length of longest line**
+- **Get length of longest line**
 
   ```bash
   awk '{if(length>max) max=length} END{print max}' file
   ```
 
-* **Print HIGH if salary >50k else LOW**
+- **Print HIGH if salary >50k else LOW**
 
   ```bash
   awk -F, '{if($NF>50000) print "HIGH"; else print "LOW"}' file
   ```
 
-* **Print total salary paid in Loan department**
+- **Print total salary paid in Loan department**
 
   ```bash
   awk -F, '$2=="Loan" {sum+=$NF} END {print sum}' file
@@ -336,10 +332,10 @@ awk 'NR>1 {count++} END {print count}' file
 
 AWK is a versatile tool to:
 
-* Process files line by line
-* Filter based on patterns
-* Perform calculations and transformations
-* Automate log analysis and data extraction
+- Process files line by line
+- Filter based on patterns
+- Perform calculations and transformations
+- Automate log analysis and data extraction
 
 ---
 
@@ -354,4 +350,6 @@ AWK is a versatile tool to:
 Let me know if you want this formatted for **GitHub README.md with a table of contents**, a **cheatsheet version for quick revision**, or integrated into your Linux notes repository for upcoming interviews and projects.
 ```
 
-````
+```
+
+```
