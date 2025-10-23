@@ -1,4 +1,0 @@
-In a given file or directory, if you find files more than a given size ex: 20MB or files older than the given days ex: 10days.
-
-Compress these files and move them in a 'archive' folder.
-
